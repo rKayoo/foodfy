@@ -1,0 +1,41 @@
+/* === container === */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; 
+
+  position: relative;
+
+  background: #FBDFDB;
+  border-radius: 30px;
+  height: 350px;
+}
+
+.container .main-text {
+  max-width: 320px;
+}
+
+.main-text h3 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+.main-text{
+  margin-left: 5%;
+}
+
+.main-text p {
+  opacity: 0.5;
+  font-size:18px;
+  line-height: 28px;
+  color: #000000;
+}
+
+#chef img{
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  height: 300px;
+}
