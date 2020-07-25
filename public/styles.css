@@ -1,0 +1,342 @@
+/* === HEADER === */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  --color-black: #111111;
+  --color-purple: #6558C3;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+.content {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+/* === HEADER === */
+header {
+  margin: 30px 0;
+}
+
+.links {
+  width: 500px;
+  
+  display: grid;
+  grid-template-columns: 1fr 70%;
+}
+
+.links .active {
+  font-weight: bold;
+}
+
+#header-links a{
+  font-size: 16px;
+  color: var(---color-black);
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+/* === FOOTER ==== */
+#main-footer {
+  background: #EEEEEE;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
+/* === MAIN-PAGE CONTAINER === */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center; 
+
+  position: relative;
+
+  background: #FBDFDB;
+  border-radius: 30px;
+  height: 350px;
+
+  margin-bottom: 50px;
+}
+
+.container .main-text {
+  max-width: 320px;
+}
+
+.main-text h3 {
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: bold;
+}
+
+.main-text{
+  margin-left: 5%;
+}
+
+.main-text p {
+  opacity: 0.5;
+  font-size:18px;
+  line-height: 28px;
+  color: #000000;
+}
+
+#chef img{
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  height: 300px;
+}
+
+/* === RECIPES === */
+h3 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px 30px;
+  margin-top: 20px;
+  color: var(---color-black);
+  cursor: pointer;
+}
+
+.recipe img {
+  width: 300px;
+  height: 140px;
+  border-radius: 15px;
+}
+
+.recipe h5 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: normal;
+}
+
+.recipe p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777777;
+
+}
+
+/* === RECIPE DETAILS === */
+.presentation {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.presentation img {
+  width: 100%;
+  height: 280px;
+}
+
+.presentation h2 {
+  font-size: 36px;
+  line-height: 46px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.presentation p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  color: #777777;
+}
+
+.details {
+  margin-bottom: 40px;
+}
+
+.details h4 {
+  display: inline;
+}
+
+.details h4 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.details button {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #999999;
+  background-color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.details ul {
+  margin-top: 20px;
+  list-style: none;
+  list-style-position: inside;
+}
+
+.details li,
+.details p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: normal;
+  color: #444444;
+}
+
+/* === MODAL === */
+.modal {
+  display:none
+}
+
+.modal.active {
+  display: block;
+}
+
+/* === ABOUT-PAGE === */
+
+.information h3{
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--color-black);
+  font-weight: bold;
+  margin: 30px 0 20px
+}
+
+.information p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #444444;
+}
+
+/* === CREATE PAGE === */
+.inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.inline h3 {
+  display: inline;
+  margin: 0;
+}
+
+.inline .button {
+  background-color: var(--color-purple);
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.item {
+  margin-top: 30px;
+}
+
+.item div:first-child {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.item input,
+.item div:nth-child(2) textarea{
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #111111;
+  background-color: white;
+  font-family: 'Roboto';
+}
+
+.item div:nth-child(2) input {
+  height: 32px;
+}
+
+.item .add-ingredient,
+.item .add-step {
+  margin-top: 15px;
+  font-size: 16px;
+  color: var(--color-purple);
+  background-color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+/* === ADMIN HEADER === */ 
+.admin-header {
+  margin-top: 0;
+}
+
+.admin-header #logo {
+  background-color: var(--color-black);
+  padding: 16px 32px;
+}
+
+.admin-header #logo img {
+  margin-left: 12vw;
+}
+
+/* === ADMIN INDEX-PAGE === */
+.menu {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 10%;
+  margin-top: 30px;
+}
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.item-image img{
+  height: 80px;
+  width: 180px;
+  border-radius: 8px;
+}
+
+.item-information h5{
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.item-information p {
+  font-size: 14px;
+  color: #777;
+}
+
+.item-information a {
+  font-size: 14px;
+  color: var(--color-purple);
+  text-decoration: none;
+}
+/* === SHOW PAGE === */
+.inline a.button{
+  text-decoration: none;
+}
+
+/* === EDIT PAGE === */
+.inline .button.delete {
+  background-color: #DC4747;
+}

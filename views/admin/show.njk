@@ -1,14 +1,19 @@
-{% extends "layout.njk" %}
+{% extends "admin/layout.njk" %}
 
 {% block head %}
   <title>Foodfy - {{recipe.title}}</title>
 {% endblock %}
 
 {% block content %}
+<div class="inline">
+    <h3>Receita: {{ recipe.title}}</h3>
+    <a href="/admin/recipes/{{recipe.id}}/edit" class="button">Editar Receita</a>
+  </div>
+
 <div class="presentation">
-  <img src="{{recipe.image}}" alt="{{recipe.title}}">
+  <img src="{{recipe.image_url}}" alt="{{recipe.title}}">
   <h2>{{recipe.title}}</h5>
-  <p>por {{recipe.author}}</p>
+  <p>por Renato Russo</p>
 </div>
 
 <div class="details">
@@ -17,7 +22,7 @@
   <div class="modal active">
     <ul>
       {% for ingredient in recipe.ingredients %}
-      <li>{{ingredient}}</li>
+      <li>- {{ingredient}}</li>
       {% endfor %}
     </ul>
   </div>
@@ -29,7 +34,7 @@
   <div class="modal active">
     <ul>
       {% for prepare in recipe.preparation %}
-      <li>{{prepare}}</li>
+      <li>- {{prepare}}</li>
       {% endfor %}
     </ul>
   </div>

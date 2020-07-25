@@ -1,5 +1,5 @@
 <h1 align="center"> 
-  <img alt="Foodfy" src="/assets/logo.png" width="100px">
+  <img alt="Foodfy" src="public/assets/logo.png" width="100px">
 </h1>
 
 ## 🔖 About
@@ -14,6 +14,7 @@ This project is being developed in the  **Launchbase bootcamp🚀** of **Rockeat
 
 ## 🚀 Techonologies
 This project is using:
+- [Node.js](https://nodejs.org/)
 - HTML
 - CSS
 - [Javascript](https://www.javascript.com/)

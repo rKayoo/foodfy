@@ -1,0 +1,93 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Triplo bacon burger",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/burger.png",
+      "ingredients": [
+        "3 kg de carne moída (escolha uma carne magra e macia)"
+      ],
+      "preparation": [
+        "Misture",
+        "Faça o formato com o arco",
+        "Geladeira"
+      ],
+      "information": "Preaqueça a chapa, frigideira ou grelha por 10 minutos antes de levar os hambúrgueres. Adicione um pouquinho de óleo ou manteiga e não amasse os hambúrgueres! Você sabia que a receita que precede o hambúrguer surgiu no século XIII, na Europa? A ideia de moer a carne chegou em Hamburgo no século XVII, onde um açogueiro resolveu também temperá-la. Assim, a receita foi disseminada nos Estados Unidos por alemães da região. Lá surgiu a ideia de colocar o hambúrguer no meio do pão e adicionar outros ingredientes, como queijom tomates e alface.\""
+    },
+    {
+      "id": 2,
+      "title": "Pizza 4 estações",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/pizza.png",
+      "ingredients": [
+        "Queijo",
+        "Tomate",
+        "Farinha de trigo"
+      ],
+      "preparation": [
+        "Bata no liquidificador",
+        "Abra a massa",
+        "Forno"
+      ],
+      "information": "Pizza de liquidificador é uma receita deliciosa e supersimples de preparar. Feita toda no liquidificador, ela é bem prática para o dia a dia. Aqui no TudoGostoso você também encontra diversas delícias práticas feitas no liquidificador: massa de panqueca, torta de frango de liquidificador, pão de queijo de liquidificador, bolo de banana, bolo de chocolate e muito mais!"
+    },
+    {
+      "id": 3,
+      "title": "Lasanha mac n' cheese",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/lasanha.png",
+      "ingredients": [
+        "Massa de lasanha",
+        "Presunto",
+        "Mussarela"
+      ],
+      "preparation": [
+        "Panela",
+        "Tempero",
+        "Desligar o fogo"
+      ],
+      "information": "Recheie a lasanha com o que preferir."
+    },
+    {
+      "id": 4,
+      "title": "Asinhas de frango ao barbecue",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/asinha.png",
+      "ingredients": [
+        "Asas de frango",
+        "Molho barbecue"
+      ],
+      "preparation": [
+        "Tempere",
+        "Frite o frango"
+      ],
+      "information": ""
+    },
+    {
+      "id": 5,
+      "title": "Espaguete ao alho",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/macarrao.png",
+      "ingredients": [
+        "Espaguete",
+        "Alho",
+        "Azeite"
+      ],
+      "preparation": [
+        "Cozinhe o macarrão",
+        "Adicione o resto"
+      ],
+      "information": "'Não lave o macarrão nem passe óleo ou gordura nele depois de escorrê-lo. Coloque direto na frigideira."
+    },
+    {
+      "id": 6,
+      "title": "Docinhos pão-do-céu",
+      "image_url": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/launchbase/receitas/doce.png",
+      "ingredients": [
+        "Ovos ",
+        "Manteiga",
+        "acucar"
+      ],
+      "preparation": [
+        "Retire do congelador, frite ou asse e está pronto."
+      ],
+      "information": ""
+    }
+  ]
+}
