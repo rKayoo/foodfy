@@ -12,16 +12,18 @@
   </head>
 
   <body>
-    <header class="admin-header">
-          <div id="logo">
-            <a href="/admin/recipes">
-              <img src="/assets/white-logo.png" alt="Foodfy">
-            </a>
-          </div>
+    <header class="main-header admin">
+      <div id="logo">
+        <img src="/assets/white-logo.png" alt="Foodfy">
+      </div>
+      <div class="header-links admin-links">
+        <a href="/admin/recipes">Receitas</a>
+        <a href="/admin/chefs">Chefes</a>
+      </div>
     </header>
-
+    
     <div class="content">
-      {% block content %} {% endblock %}
+        {% block content %} {% endblock %}
     </div>
   </body>
   

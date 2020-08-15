@@ -1,4 +1,4 @@
-{% extends "admin/layout.njk" %}
+{% extends "recipes/layout.njk" %}
 
 {% block head%}
     <title>Foodfy</title>
@@ -12,11 +12,11 @@
   {% for recipe in recipes%}
   <div class="menu-item" id="{{recipe.id}}">
     <div class="item-image">
-      <img src="{{recipe.image_url}}" alt="{{recipe.title}}">
+      <img src="{{recipe.image}}" alt="{{recipe.title}}">
     </div>
     <div class="item-information">
       <h5>{{recipe.title}}</h5>
-      <p>por Jorge Amado</p>
+      <p>por {{recipe.chef_name}}</p>
       <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
     </div>
   </div>

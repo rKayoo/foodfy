@@ -1,16 +1,4 @@
-{% extends "admin/layout.njk" %}
-
-{% block head%}
-  <title>Foodfy - Criar receita</title>
-{% endblock %}
-
-{% block content %}
-<form action="/admin/recipes" method="POST">
-  <div class="inline">
-    <h3>Criando Receita</h3>
-    <button type="submit" class="button">Salvar Receita</button>
-  </div>
-  <div class="item">
+<div class="item">
     <div>Nome da receita</div>
     <div>
       <input type="text" name="title">
@@ -20,6 +8,17 @@
     <div>Imagem de receita</div>
     <div>
       <input type="url" name="image_url" placeholder="https://">
+    </div>
+  </div>
+  <div class="item">
+    <div>Chef</div>
+    <div>
+      <select name="chef">
+        <option value="" disabled selected hidden>Selecione um chef</option>
+        {% for chef in chefs %}
+          <option value="{{chef.id}}">{{chef.name}}</option>
+        {% endfor %}
+      </select>
     </div>
   </div>
   <div class="item">
@@ -46,5 +45,3 @@
       <textarea name="information" cols="30" rows="10"></textarea>
     </div>
   </div>
-</form>
-{% endblock %}

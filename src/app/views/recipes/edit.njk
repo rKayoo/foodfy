@@ -1,4 +1,33 @@
-<div class="item">
+{% extends "recipes/layout.njk" %}
+
+{% block head%}
+  <title>Foodfy - Editar receita</title>
+{% endblock %}
+
+{% block content %}
+<form 
+  id="delete-form" 
+  action="/admin/recipes?_method=DELETE" 
+  method="POST"
+>
+  <input type="hidden" name="id" value="{{ recipe.id }}">
+</form>
+<form action="/admin/recipes?_method=PUT" method="POST">
+  <div class="inline">
+    <h3>Editando Receita</h3>
+    <div>
+      <button 
+        type="submit" 
+        class="button delete" 
+        form="delete-form"
+      >
+        Deletar
+      </button>
+      <button type="submit" class="button">Salvar Receita</button>
+    </div>
+  </div>
+  
+  <div class="item">
     <div>Nome da receita</div>
     <div>
       <input 
@@ -15,7 +44,7 @@
         type="url" 
         name="image_url" 
         placeholder="https://"
-        value="{{ recipe.image_url }}"
+        value="{{ recipe.image }}"
       >
     </div>
   </div>
@@ -54,8 +83,11 @@
   <div class="item">
     <div>Informações adicionais</div>
     <div>
-      <textarea name="information" cols="30" rows="10">
-        {{ recipe.information}}
-      </textarea>
+      <textarea name="information" cols="30" rows="10">{{recipe.information}}</textarea>
     </div>
   </div>
+
+  <input type="hidden" name="id" value="{{ recipe.id }}">
+
+</form>
+{% endblock %}

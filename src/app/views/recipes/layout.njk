@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/styles.css">
+    {% block head%}
+      <title>Foodfy</title>
+    {% endblock%}
+  </head>
+
+  <body>
+    <header class="main-header admin">
+      <div id="logo">
+        <img src="/assets/white-logo.png" alt="Foodfy">
+      </div>
+      <div class="header-links admin-links">
+        <a href="/admin/recipes">Receitas</a>
+        <a href="/admin/chefs">Chefes</a>
+      </div>
+    </header>
+    
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+  </body>
+  
+  <script src="/scripts.js"></script>
+
+</html>

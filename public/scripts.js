@@ -1,10 +1,11 @@
 const recipes = document.querySelectorAll('.recipe');
 const details = document.querySelectorAll('.details button');
 const currentPage = location.pathname;
-const menuItems = document.querySelectorAll('header #header-links a');
+const menuItems = document.querySelectorAll('header .header-links a');
 const addButton = document.querySelectorAll('.item p');
 const prepare = document.querySelector('#prepare');
 const deleteForm = document.querySelector('#delete-form');
+const searchForm = document.querySelector('.main-header form')
 
 // Enter the user into a recipe page
 for(let recipe of recipes) {
@@ -33,10 +34,15 @@ for(let detail of details) {
 }
 
 // Make the header item bold
-for(item of menuItems) {
+for(let item of menuItems) {
   if(currentPage.includes(item.getAttribute('href'))) {
     item.classList.add('active');
   }
+}
+
+// Include recipe search
+if(currentPage == '/recipes' || currentPage == '/') {
+  searchForm.classList.add('active');
 }
 
 //Add Ingredient button

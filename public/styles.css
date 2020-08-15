@@ -12,52 +12,88 @@
 
 html, body {
   font-family: 'Roboto', sans-serif;
-  height: 100%;
+  height: 100vh;  
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-  max-width: 70vw;
+  width: 70vw;
   margin: 0 auto;
 }
 
 /* === HEADER === */
 header {
   margin: 30px 0;
-}
 
-.links {
-  width: 500px;
-  
   display: grid;
-  grid-template-columns: 1fr 70%;
+  grid-template-columns: 1fr 50% 30%;
+
+  align-items: center;
 }
 
-.links .active {
+.main-header .header-links .active {
   font-weight: bold;
 }
 
-#header-links a{
+.main-header .header-links a{
   font-size: 16px;
   color: var(---color-black);
   margin-right: 30px;
   text-decoration: none;
 }
 
-/* === FOOTER ==== */
-#main-footer {
-  background: #EEEEEE;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  margin-top: 50px;
+.main-header .header-links a:hover {
+  opacity: 0.7;
+  border-bottom: 1px solid var(--color-black);
 }
 
-footer p {
+.main-header form {
+  justify-self: end;
+  opacity: 0;
+}
+
+.main-header form.active{
+  opacity: 1;
+ }
+.main-header form input {
+  background: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.main-header form button {
+  background: var(--color-purple);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #FFF;
+}
+
+/* === FOOTER ==== */
+#footer-box {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+}
+
+#footer-box footer {
+  width:100%;
+  padding: 8px 16px;
+  background-color: #eeeeee;
+  width: 100%;
+
   font-size: 14px;
   line-height: 24px;
   color: #999999;
 }
-
 /* === MAIN-PAGE CONTAINER === */
 
 .container {
@@ -134,7 +170,6 @@ h3 {
   font-size: 14px;
   line-height: 24px;
   color: #777777;
-
 }
 
 /* === RECIPE DETAILS === */
@@ -146,6 +181,8 @@ h3 {
 .presentation img {
   width: 100%;
   height: 280px;
+  border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 .presentation h2 {
@@ -188,7 +225,7 @@ h3 {
 }
 
 .details ul {
-  margin-top: 20px;
+  margin-top: 10px;
   list-style: none;
   list-style-position: inside;
 }
@@ -257,6 +294,7 @@ h3 {
 }
 
 .item input,
+.item select,
 .item div:nth-child(2) textarea{
   width: 100%;
   margin-top: 10px;
@@ -266,6 +304,11 @@ h3 {
   color: #111111;
   background-color: white;
   font-family: 'Roboto';
+}
+
+.item select {
+  outline: none;
+  height: 35px;
 }
 
 .item div:nth-child(2) input {
@@ -282,21 +325,45 @@ h3 {
   outline: none;
 }
 
+/* === MAIN CHEF PAGE === */
+.item-information.chef a {
+  color: #666;
+}
+
 /* === ADMIN HEADER === */ 
-.admin-header {
+.main-header.admin {
+  grid-template-columns: 12.5vw 12.5vw 1fr;
+  grid-template-areas: "none logo links" ;
+  background-color: var(--color-black);
+  padding: 16px 32px;
   margin-top: 0;
 }
 
-.admin-header #logo {
-  background-color: var(--color-black);
-  padding: 16px 32px;
+.main-header.admin #logo {
+  grid-area: logo;
 }
 
-.admin-header #logo img {
-  margin-left: 12vw;
+.main-header.admin .header-links {
+  grid-area: links;
 }
 
-/* === ADMIN INDEX-PAGE === */
+.main-header.admin a.active {
+  color: #FFF;
+}
+
+.header-links.admin-links a {
+  color: #999;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 30px;
+}
+
+.main-header.admin .header-links a:hover {
+  border-bottom: 1px solid #FFF;
+}
+
+/* === RECIPES INDEX-PAGE === */
 .menu {
   display: grid;
   grid-template-columns: 40% 40%;
@@ -306,8 +373,9 @@ h3 {
 
 .menu-item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  
+  grid-template-columns: 1fr 1fr;  
+
+  align-items: center;
 }
 
 .item-image img{
@@ -319,6 +387,7 @@ h3 {
 .item-information h5{
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 10px;
 }
 
 .item-information p {
@@ -331,12 +400,46 @@ h3 {
   color: var(--color-purple);
   text-decoration: none;
 }
-/* === SHOW PAGE === */
+/* === RECIPES SHOW PAGE === */
 .inline a.button{
   text-decoration: none;
 }
 
-/* === EDIT PAGE === */
+/* === RECIPES EDIT PAGE === */
 .inline .button.delete {
   background-color: #DC4747;
+}
+
+/* === CHEFS INDEX PAGE ==== */
+.menu-chefs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  grid-gap: 30px;
+
+  margin-top: 30px;
+}
+
+.menu-item.chef {
+  grid-template-columns: 100px 1fr;
+}
+
+.menu-item .chef-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* === CHEFS SHOW PAGE === */ 
+.presentation.chef {
+  margin-top: 50px;
+}
+.presentation.chef img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+h4 {
+  font-size: 24px;
 }
